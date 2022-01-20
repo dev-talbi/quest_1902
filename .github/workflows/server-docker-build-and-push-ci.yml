@@ -16,8 +16,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.zacksinger }}
-          password: ${{ secrets.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 }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Check out code
         uses: actions/checkout@v2
       - name: Build and push
